@@ -5,38 +5,38 @@
     <update id="update">
         update employee
         <set>
-            <if test="username != null and username!= ''">
-                username = #{username}
+            <if test="username != null">
+                username = #{username},
             </if>
-            <if test="name != null and name!= ''">
-                name = #{name}
+            <if test="name != null">
+                name = #{name},
             </if>
-            <if test="password != null and password!= ''">
-                password = #{password}
+            <if test="password != null">
+                password = #{password},
             </if>
-            <if test="phone != null and phone!= ''">
-                phone = #{phone}
+            <if test="phone != null">
+                phone = #{phone},
             </if>
-            <if test="sex != null and sex!= ''">
-                sex = #{sex}
+            <if test="sex != null">
+                sex = #{sex},
             </if>
-            <if test="idNumber != null and idNumber!= ''">
-                idNumber = #{idNumber}
+            <if test="idNumber != null">
+                id_number = #{idNumber},
             </if>
             <if test="status != null">
-                status = #{status}
+                status = #{status},
             </if>
             <if test="createTime != null">
-                createTime = #{createTime}
+                create_time = #{createTime},
             </if>
             <if test="updateTime != null">
-                updateTime = #{updateTime}
+                update_time = #{updateTime},
             </if>
             <if test="createUser != null">
-                createUser = #{createUser}
+                create_user = #{createUser},
             </if>
             <if test="updateUser != null">
-                updateUser = #{updateUser}
+                update_user = #{updateUser},
             </if>
         </set>
         where id = #{id}
