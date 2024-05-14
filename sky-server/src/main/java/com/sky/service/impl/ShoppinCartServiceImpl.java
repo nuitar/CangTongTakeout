@@ -1,5 +1,6 @@
 package com.sky.service.impl;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import com.sky.context.BaseContext;
 import com.sky.dto.ShoppingCartDTO;
 import com.sky.entity.Dish;
@@ -64,6 +65,14 @@ public class ShoppinCartServiceImpl implements ShoppingCartService {
             shoppingCart.setCreateTime(LocalDateTime.now());
             shoppingCartMapper.insert(shoppingCart);
         }
+
+    }
+
+    @Override
+    public List<ShoppingCart> showShoppingCart() {
+        ShoppingCart shoppingCart = ShoppingCart.builder().userId(BaseContext.getCurrentId()).build();
+
+        return shoppingCartMapper.list(shoppingCart);
 
     }
 }
